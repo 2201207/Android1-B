@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FAFAFA">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="#212121"
+        android:gravity="center_vertical"
+        android:paddingStart="12dp"
+        android:text="View"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="당신의 취미는 ?"
+            android:textColor="#555555"
+            android:textSize="16sp" />
+
+        <CheckBox
+            android:id="@+id/checkReading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="독서"
+            android:textSize="16sp" />
+
+        <CheckBox
+            android:id="@+id/checkTravel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="여행"
+            android:textSize="16sp" />
+
+        <CheckBox
+            android:id="@+id/checkGame"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="게임"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/btnSelect"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="12dp"
+            android:backgroundTint="#D6D8D7"
+            android:text="선택하기"
+            android:textColor="#222222" />
+
+        <TextView
+            android:id="@+id/txtResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:textColor="#777777"
+            android:textSize="16sp"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+</LinearLayout>
