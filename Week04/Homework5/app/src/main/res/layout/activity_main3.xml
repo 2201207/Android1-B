@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFF">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:gravity="center_vertical"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:background="#008577"
+        android:text="온도 변환기"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="12dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textCelsius"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:text="섭씨온도(0.0 ℃)"
+                android:textColor="#666666" />
+
+            <SeekBar
+                android:id="@+id/seekCelsius"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:max="200"
+                android:progress="100"
+                android:enabled="false"
+                android:contentDescription="섭씨온도 선택" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textFahrenheit"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:text="화씨온도(0.0 ℉)"
+                android:textColor="#666666" />
+
+            <SeekBar
+                android:id="@+id/seekFahrenheit"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:max="200"
+                android:progress="100"
+                android:enabled="false"
+                android:contentDescription="화씨온도 선택" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <RadioGroup
+                android:id="@+id/radioGroup"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/radioCelsius"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="섭씨를 화씨로"
+                    android:textColor="#000000" />
+
+                <RadioButton
+                    android:id="@+id/radioFahrenheit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="화씨를 섭씨로"
+                    android:textColor="#000000" />
+            </RadioGroup>
+
+            <Button
+                android:id="@+id/btnConvert"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#DDDDDD"
+                android:text="변환"
+                android:textColor="#000000" />
+
+            <Button
+                android:id="@+id/btnReset"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:backgroundTint="#DDDDDD"
+                android:text="초기화"
+                android:textColor="#000000" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:textColor="#666666"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+</LinearLayout>
